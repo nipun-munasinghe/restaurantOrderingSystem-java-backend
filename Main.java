@@ -14,7 +14,7 @@ public class Main {
 
         while (run) {
             System.out.print("Menu:\n" +
-                    "1. View Menu\n" +
+                    "1. View menu\n" +
                     "2. Place an order\n" +
                     "3. View current orders\n" +
                     "4. Update menu (Admin Only)\n" +
@@ -22,6 +22,11 @@ public class Main {
                     "Enter your choice: ");
             int choice = scanner.nextInt();
             scanner.nextLine();
+
+            switch(choice) {
+                case 1:
+
+            }
         }
     }
 }
