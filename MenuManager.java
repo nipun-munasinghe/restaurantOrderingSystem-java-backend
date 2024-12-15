@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class MenuManager {
     private ArrayList<FoodItem> menu;
@@ -34,5 +35,43 @@ public class MenuManager {
             }
         }
         return null;
+    }
+
+    //method to update the menu
+    public void updateMenu(Scanner scanner) {
+        System.out.print("\nAdmin Menu:\n" +
+                "1. Add a food item\n" +
+                "2. Remove a food item\n" +
+                "Enter your choice: ");
+        int choice = scanner.nextInt();
+        scanner.nextLine();
+
+        switch(choice) {
+            case 1:
+                System.out.print("Enter name of the food: ");
+                String name = scanner.nextLine();
+                System.out.print("Enter Price: ");
+                double price = scanner.nextDouble();
+                int newId = menu.size()+1;
+                menu.add(new FoodItem(newId, name, price));
+                System.out.println("Food item added successfully.");
+                break;
+            case 2:
+                System.out.print("Enter food item id to remove: ");
+                int id = scanner.nextInt();
+                FoodItem item = getFoodItemById(id);
+
+                //check item
+                if(item != null) {
+                    menu.remove(item);
+                    System.out.println("Food item removed successfully.");
+                }
+                else {
+                    System.out.println("Item not found.");
+                }
+                break;
+            default:
+                System.out.println("Invalid choice.");
+        }
     }
 }

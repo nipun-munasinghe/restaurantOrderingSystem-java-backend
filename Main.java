@@ -42,7 +42,7 @@ public class Main {
                     orderManager.viewOrders();
                     break;
                 case 4:
-                    System.out.print("Enter Admin password: ");
+                    System.out.print("\nEnter Admin password: ");
                     String enteredPwd = scanner.nextLine();
                     //Check password
                     if(enteredPwd.equals(ADMIN_PASSWORD)) {
