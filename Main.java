@@ -13,7 +13,10 @@ public class Main {
         menuManager.addFoodItem(new FoodItem(2, "Pizza", 1200));
         menuManager.addFoodItem(new FoodItem(3, "Noodles", 750));
         menuManager.addFoodItem(new FoodItem(4, "Coca-cola", 280));
-        menuManager.addFoodItem(new FoodItem(5, "Coffe", 60));
+        menuManager.addFoodItem(new FoodItem(5, "Coffee", 60));
+
+        //Admin password
+        final String ADMIN_PASSWORD = "systemAdmin100";
 
         System.out.println("Welcome to the Restaurant Ordering System!");
 
@@ -39,6 +42,15 @@ public class Main {
                     orderManager.viewOrders();
                     break;
                 case 4:
+                    System.out.print("Enter Admin password: ");
+                    String enteredPwd = scanner.nextLine();
+                    //Check password
+                    if(enteredPwd.equals(ADMIN_PASSWORD)) {
+                        menuManager.updateMenu(scanner);
+                    }
+                    else {
+                        System.out.println("Incorrect Password. Action denied.");
+                    }
                     break;
             }
         }
