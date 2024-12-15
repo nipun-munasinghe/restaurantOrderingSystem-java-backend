@@ -52,7 +52,15 @@ public class Main {
                         System.out.println("Incorrect Password. Action denied.");
                     }
                     break;
+                case 5:
+                    run = false;
+                    System.out.println("\nThank you for using the system. Have a nice day!");
+                    break;
+                default:
+                    System.out.println("Invalid choice. Please try again.");
+                    break;
             }
         }
+        scanner.close();
     }
 }
