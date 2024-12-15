@@ -18,7 +18,7 @@ public class Main {
         System.out.println("Welcome to the Restaurant Ordering System!");
 
         while (run) {
-            System.out.print("Menu:\n" +
+            System.out.print("\nMenu:\n" +
                     "1. View menu\n" +
                     "2. Place an order\n" +
                     "3. View current orders\n" +
@@ -31,6 +31,9 @@ public class Main {
             switch(choice) {
                 case 1:
                     menuManager.displayMenu();
+                    break;
+                case 2:
+                    orderManager.placeOrder(menuManager, scanner);
                     break;
             }
         }

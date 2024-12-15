@@ -27,5 +27,12 @@ public class MenuManager {
         }
     }
 
-
+    public FoodItem getFoodItemById(int id) {
+        for(FoodItem item : menu) {
+            if (item.getId() == id) {
+                return item;
+            }
+        }
+        return null;
+    }
 }
