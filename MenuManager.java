@@ -15,7 +15,7 @@ public class MenuManager {
     //method to display menu
     public void displayMenu() {
         if(menu.isEmpty()) {
-            System.out.println("The menu is currently empty.");
+            System.out.println("\nThe menu is currently empty.\n");
         }
         else {
             System.out.println("\nMenu Items:");
@@ -27,5 +27,5 @@ public class MenuManager {
         }
     }
 
-    
+
 }

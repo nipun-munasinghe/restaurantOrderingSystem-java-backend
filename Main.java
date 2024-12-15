@@ -9,6 +9,11 @@ public class Main {
         boolean run = true;
 
         //predefined menu items
+        menuManager.addFoodItem(new FoodItem(1, "Burger", 250));
+        menuManager.addFoodItem(new FoodItem(2, "Pizza", 1200));
+        menuManager.addFoodItem(new FoodItem(3, "Noodles", 750));
+        menuManager.addFoodItem(new FoodItem(4, "Coca-cola", 280));
+        menuManager.addFoodItem(new FoodItem(5, "Coffe", 60));
 
         System.out.println("Welcome to the Restaurant Ordering System!");
 
@@ -25,7 +30,8 @@ public class Main {
 
             switch(choice) {
                 case 1:
-
+                    menuManager.displayMenu();
+                    break;
             }
         }
     }
