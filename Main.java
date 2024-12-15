@@ -35,6 +35,11 @@ public class Main {
                 case 2:
                     orderManager.placeOrder(menuManager, scanner);
                     break;
+                case 3:
+                    orderManager.viewOrders();
+                    break;
+                case 4:
+                    break;
             }
         }
     }

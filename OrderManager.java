@@ -41,4 +41,17 @@ public class OrderManager {
         System.out.println("\nOrder placed successfully.");
         System.out.println(order);
     }
+
+    //method to viewOrders
+    public void viewOrders() {
+        if(orders.isEmpty()) {
+            System.out.println("No orders have been placed.");
+        }
+        else {
+            System.out.println("\nCurrent Orders:");
+            for (Order order : orders) {
+                System.out.println(order);
+            }
+        }
+    }
 }
